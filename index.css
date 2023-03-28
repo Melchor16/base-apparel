@@ -1,0 +1,114 @@
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    --gradient-one: linear-gradient(135deg, rgba(255,255,255,1), rgba(255,244,244,1));
+    --gradient-two: linear-gradient(135deg, rgba(247,190,190,1), rgba(237,139,139,1));
+}
+
+main{
+    display: grid;
+    font-family: Josefin Sans;
+    grid-template-columns: 60% 40%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+}
+
+/* RIGHT SIDE */
+
+.image img{
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+/* LEFT SIDE */
+
+.main-page{
+    margin: 20px 70px 20px 70px;
+    z-index: 1;
+}
+
+.main-title{
+    margin-top: 100px;
+    font-weight: 300;
+    font-size: 6vw;
+    color: var(--Desaturated-Red);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.main-title span{
+    color: var(--Dark-Grayish-Red);
+    font-weight: 600;
+}
+
+.main-text{
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 2vw;
+    color: var(--Desaturated-Red);
+}
+
+/* MAIL FORM */
+
+.email-form{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.email-form label{
+    display: none;
+}
+
+.email{
+    height: 3vw;
+    width: 100%;
+    min-width: ;
+    border-radius: 3vw;
+    border-color: var(--Desaturated-Red);
+    box-shadow: none;
+    font-family: Josefin Sans;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.email::placeholder{
+    font-family: Josefin Sans;
+    font-size: 2vw;
+    color: var(--Soft-Red);
+    text-align: center;
+}
+
+.submit{
+    padding: .7vw 3vw .7vw 3vw;
+    border-radius: 2vw;
+    background: linear-gradient(0deg, rgba(255,131,131,1) 0%, rgba(255,75,75,1) 100%);
+    box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
+    -webkit-box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
+    -moz-box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
+    color: white;
+    font-size: 2.5vw;
+    text-align: center;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: -8%;
+    transform: scale(100%);
+    transition: transform .5s;
+}
+
+.submit:hover{
+    background: linear-gradient(0deg, rgba(255,75,75,1) 0%, rgba(255,131,131,1) 100%);
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+/* ATTRUBURION */
+
+.hidden{
+    display: none;
+}
+
