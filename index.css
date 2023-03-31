@@ -9,9 +9,15 @@
 }
 
 main{
+    height: auto;
     display: grid;
-    font-family: Josefin Sans;
     grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 90%;
+    font-family: Josefin Sans;
+    grid-template-areas: 
+    'logo   img'
+    'main   img'
+    ;
     background-image: url(./images/bg-pattern-desktop.svg);
 }
 
@@ -21,13 +27,23 @@ main{
     width: 100%;
     height: auto;
     z-index: 0;
+    grid-area: img;
 }
 
 /* LEFT SIDE */
 
 .main-page{
-    margin: 20px 70px 20px 70px;
+    margin: 20px 13vw 20px 13vw;
     z-index: 1;
+    grid-area: main;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.logo img{
+    height: 2.5vw;
 }
 
 .main-title{
@@ -46,14 +62,16 @@ main{
 
 .main-text{
     margin-top: 50px;
-    font-weight: 300;
-    font-size: 2vw;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 2vw;
     color: var(--Desaturated-Red);
 }
 
 /* MAIL FORM */
 
 .email-form{
+    margin-top: 3vw;
     display: flex;
     justify-content: center;
     position: relative;
@@ -66,20 +84,22 @@ main{
 .email{
     height: 3vw;
     width: 100%;
-    min-width: ;
     border-radius: 3vw;
-    border-color: var(--Desaturated-Red);
+    border-color: hsla(0, 36%, 70%, 20%);
     box-shadow: none;
     font-family: Josefin Sans;
     font-size: 1.5vw;
-    text-align: center;
+    text-align: left;
+    text-indent: 2vw;
 }
 
 .email::placeholder{
+    text-indent: 2vw;
+    transform: translate(0, 15%);
     font-family: Josefin Sans;
-    font-size: 2vw;
-    color: var(--Soft-Red);
-    text-align: center;
+    font-size: 1.5vw;
+    color: hsla(0, 36%, 70%, 40%);
+    text-align: left;
 }
 
 .submit{
@@ -104,6 +124,17 @@ main{
     background: linear-gradient(0deg, rgba(255,75,75,1) 0%, rgba(255,131,131,1) 100%);
     cursor: pointer;
     transform: scale(105%);
+}
+
+.submit:invalid{
+    border-color: var(--Desaturated-Red);
+}
+
+.error{
+    height: 2.5vw;
+    position: absolute;
+    right: 25%;
+    top: 10%;
 }
 
 /* ATTRUBURION */

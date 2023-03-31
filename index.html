@@ -15,16 +15,17 @@
 </head>
 <body>
   <main>
+    <div class="logo" id="logo">
+      <img src="./images/logo.svg" alt="Base Apparel">
+    </div>
     <div class="main-page" id="main-page">
-      <div class="logo" id="logo">
-        <img src="./images/logo.svg" alt="Base Apparel">
-      </div>
       <h1 class="main-title">We're <span>coming soon</span></h1>
       <p class="main-text">Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
       <form name="email-form" class="email-form" id="email-form" action="/">
         <label for="email">Email Address</label>
-        <input type="email" id="email" class="email" name="email" placeholder="Email Address">
+        <input type="email" id="email" class="email" name="email" placeholder="Email Address" required="required">
+        <img class="error hidden" src="./images/icon-error.svg" alt="error">
         <button type="submit" class="submit" id="submit">></button>
       </form>
     </div>
