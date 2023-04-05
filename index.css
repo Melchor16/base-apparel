@@ -9,7 +9,7 @@
 }
 
 main{
-    height: auto;
+    height: 60vw;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 10% 90%;
@@ -23,18 +23,30 @@ main{
 
 /* RIGHT SIDE */
 
-.image img{
-    width: 100%;
-    height: auto;
-    z-index: 0;
+.image{
+    grid-row-start: 1;
+    grid-row-end: 3;
     grid-area: img;
+}
+
+.desktop-image{
+    width: auto;
+    height: 100%;
+    z-index: 0;
+}
+
+.mobile-image{
+    display: none;
+    width: 100%;
+    grid-column-start: 2;
 }
 
 /* LEFT SIDE */
 
 .main-page{
-    margin: 20px 13vw 20px 13vw;
+    margin: 2vw 13vw 2vw 13vw;
     z-index: 1;
+    max-height: auto;
     grid-area: main;
 }
 
@@ -44,15 +56,17 @@ main{
 
 .logo img{
     height: 2.5vw;
+    margin-left: 13vw;
+    margin-top: 3vw;
 }
 
 .main-title{
-    margin-top: 100px;
+    margin-top: 10vw;
     font-weight: 300;
     font-size: 6vw;
     color: var(--Desaturated-Red);
     text-transform: uppercase;
-    letter-spacing: 15px;
+    letter-spacing: 2vw;
 }
 
 .main-title span{
@@ -61,7 +75,7 @@ main{
 }
 
 .main-text{
-    margin-top: 50px;
+    margin-top: 5vw;
     font-weight: 400;
     font-size: 1.2vw;
     line-height: 2vw;
@@ -143,3 +157,39 @@ main{
     display: none;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 375px){
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows: 20% auto auto;
+        grid-template-areas: 
+        'logo'
+        'img'
+        'main'
+        ;
+    }
+
+    .logo img{
+        height: 4vw;
+    }
+
+    .desktop-image{
+        display: none;
+    }
+
+    .mobile-image{
+        display: block;
+    }
+
+    .main-title{
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .main-text{
+        font-size: 3.5vw;
+        line-height: 5vw;
+        text-align: center;
+    }
+}
