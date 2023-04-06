@@ -120,9 +120,9 @@ main{
     padding: .7vw 3vw .7vw 3vw;
     border-radius: 2vw;
     background: linear-gradient(0deg, rgba(255,131,131,1) 0%, rgba(255,75,75,1) 100%);
-    box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
-    -webkit-box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
-    -moz-box-shadow: 3px 3px 28px 6px rgba(255,0,0,0.37);
+    box-shadow: .5vw .5vw 2vw .5vw rgba(255,0,0,0.37);
+    -webkit-box-shadow: .5vw .5vw 2vw .5vw rgba(255,0,0,0.37);
+    -moz-box-shadow: .5vw .5vw 2vw .5vw rgba(255,0,0,0.37);
     color: white;
     font-size: 2.5vw;
     text-align: center;
@@ -182,6 +182,10 @@ main{
         display: block;
     }
 
+    .main-page{
+        margin: 2vw 8vw 2vw 8vw;
+    }
+
     .main-title{
         font-size: 10vw;
         text-align: center;
@@ -191,5 +195,27 @@ main{
         font-size: 3.5vw;
         line-height: 5vw;
         text-align: center;
+    }
+
+    .email{
+        margin-top: 5vw;
+        height: 10vw;
+        width: 100%;
+        border-radius: 10vw;
+        font-size: 5vw;
+    }
+
+    .email::placeholder{
+        text-indent: 5vw;
+        transform: translate(0, 10%);
+        font-size: 5vw;
+    }
+
+    .submit{
+        padding: 3vw 6vw 3vw 6vw;
+        border-radius: 10vw;
+        font-size: 5vw;
+        right: 0;
+        top: 30%;
     }
 }
