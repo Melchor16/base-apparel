@@ -15,20 +15,25 @@
 </head>
 <body>
   <main>
+    <!-- Top logo -->
     <div class="logo" id="logo">
       <img src="./images/logo.svg" alt="Base Apparel">
     </div>
+    <!-- Left Side -->
     <div class="main-page" id="main-page">
       <h1 class="main-title">We're <span>coming soon</span></h1>
       <p class="main-text">Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
       <form name="email-form" class="email-form" id="email-form" action="/">
         <label for="email">Email Address</label>
-        <input type="email" id="email" class="email" name="email" placeholder="Email Address" required="required">
-        <img class="error hidden" src="./images/icon-error.svg" alt="error">
+        <input type="text" id="email" class="email" name="email" placeholder="Email Address">
+        <img class="error hidden" id="error-icon" src="./images/icon-error.svg" alt="error">
         <button type="submit" class="submit" id="submit">></button>
       </form>
+      <p class="error-message hidden" id="error-message">Please provide a valid email</p>
+      <p class="success-message hidden" id="success-message">Thanks for providing your information.</p>
     </div>
+    <!-- Right side -->
     <div class="image" id="image">
       <img class="desktop-image" src="./images/hero-desktop.jpg" alt="Welcome">
       <img class="mobile-image" src="./images/hero-mobile.jpg" alt="Welcome">
@@ -37,7 +42,7 @@
   <footer>
     <p class="attribution hidden">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Melchor16" target="_blank">Erick Melchor</a>.
     </p>
   </footer>
   <script src="./index.js"></script>
