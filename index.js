@@ -20,6 +20,8 @@ $email_form.addEventListener('submit', e =>{
         $error_icon.classList.add('hidden')
         $error_message.classList.add('hidden')
         $success_message.classList.remove('hidden')
+
+        $email.value = ''
     }
     
 })
